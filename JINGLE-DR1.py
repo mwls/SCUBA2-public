@@ -10,11 +10,11 @@ import numpy
 import astropy.io.fits as pyfits
 
 # select folder
-rootFolder = "/home/scuba2/spxmws/jump-drive/jingle/rawData"
+rootFolder = "/rawData"
 
 # select JINGLE numbers to process
-#JINGLEids = range(0,193)
-JINGLEids = [81]
+JINGLEids = range(0,193)
+#JINGLEids = [81]
 
 # select band to process
 bands = {"450":False, "850":True} 
@@ -24,21 +24,21 @@ bands = {"450":False, "850":True}
 # input files
 
 # JINGLE catalogue file
-catFile = "/home/gandalf/spxmws/Hard-Drive/jingle/JINGLE-info.dat"
+catFile = "/jingle/JINGLE-info.dat"
 
 # select dimm locations
-dimm1 = "/home/scuba2/spxmws/jump-drive/jingle/dimm/dimmconfig_jingle.lis"
+dimm1 = "/jingle/dimm/dimmconfig_jingle.lis"
 
 # select mask folder
-maskFolder = "/home/scuba2/spxmws/jump-drive/jingle/rawData/masks"
+maskFolder = "jingle/rawData/masks"
 
 #######################################################
 
 ### Calibration Settings
 
 # select calibration folder
-calfolder = {"450":"/home/scuba2/spxmws/jump-drive/jingle/cal/450/DR1",\
-             "850":"/home/scuba2/spxmws/jump-drive/jingle/cal/850/DR1"}
+calfolder = {"450":"/jingle/cal/450/DR1",\
+             "850":"/jingle/cal/850/DR1"}
 
 # calibration options
 calOptions = {"fixed":True, "variable":False}
@@ -67,13 +67,13 @@ stardev = False
 ### map-maker settings
 
 # specify starlink temp folder
-tempFolder = "/home/scuba2/spxmws/jump-drive/jingle/rawData/temp"
+tempFolder = "/jingle/rawData/temp"
 
 # set number of threads for makemap
 nThreads = -1
 
 # select skyloop file
-skyloopFile = "/home/gandalf/spxmws/Hard-Drive/scripts/python/SCUBA2/JINGLE/skyloopMS2.py"
+skyloopFile = "/JINGLE/skyloopMS2.py"
 
 # multi-object maps
 multiJINGLE = { 22:[145], 30:[46, 51], 38:[160], 43:[180], 46:[30, 51], 48:[65],\
@@ -128,8 +128,8 @@ def shellCreator(mode, fileName, stardev, tempFolder, nThreads, band, fileList=N
     shellOut.write("source $SMURF_DIR/smurf.csh \n")
     shellOut.write("convert \n" )
     
-    shellOut.write("setenv home /home/user/spxmws/temp \n")
-    shellOut.write("setenv HOME /home/user/spxmws/temp \n")
+    shellOut.write("setenv home /temp \n")
+    shellOut.write("setenv HOME /temp \n")
     
     # say other disks OK
     shellOut.write("setenv ORAC_NFS_OK 1 \n")
