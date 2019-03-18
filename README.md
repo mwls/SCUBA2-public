@@ -14,7 +14,7 @@ This script was orginally created to deal with a bug in the 2017 starlink, which
 
 **SCUBA2-mapMaker.py**
 
-This script creates SCUBA-2 maps, optimised for the case of marginally extended isolated objects, for example nearby galaxies. This code is virtually identical to that used for JINGLE-DR1, however a few very minor features are missing as they are complicated to implement (for example calibrating every observation indvidually). Instructions to use the script are given in the first few lines, while I've tried to make it user-friendly I could do with a few hours to do this properly... If you use this script please cite "Smith et al. 2019 (submitted)". Ti run this script ypi will need the files in the JINGLE-DR folder. Note at the moment this script was to designed to work in Python 2.
+This script creates SCUBA-2 maps, optimised for the case of marginally extended isolated objects, for example nearby galaxies. As well as making the maps, the script converts everything to fits files, calibrates the data, and smooths/matched filters the data. This code is virtually identical to that used for JINGLE-DR1, however a few very minor features are missing as they are complicated to implement (for example calibrating every observation indvidually). Instructions to use the script are given in the first few lines, while I've tried to make it user-friendly I could do with a few hours to do this properly... If you use this script please cite "Smith et al. 2019 (submitted)". To run this script ypi will need the files in the JINGLE-DR folder. Note at the moment this script was to designed to work in Python 2.
 
 **JINGLE-DR1.py**
 
