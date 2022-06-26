@@ -73,3 +73,10 @@ imagePaper.ps
 
 # don't want to track MAC DS file
 .DS_Store
+
+# eclipse project
+.project
+.pydevproject
+
+# vscode
+.vscode/
