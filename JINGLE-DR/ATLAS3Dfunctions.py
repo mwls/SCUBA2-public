@@ -888,7 +888,7 @@ def backNoiseSimulation(signal, header, error, folder, nebParam, ellipseInfo, ga
     cutDEC = decMap[backInclude]
     
     # run nebuliser
-    if platform.node() == "gandalf":
+    if platform.node() == "glados":
         os.environ["PATH"] = "/home/cardata/spxmws/hyper-drive/casutools-gandalf/casutools-1.0.30/bin:" + os.environ["PATH"] 
     command = "nebuliser " + "nebIn-"+id+".fits" + " " + "nebMask-"+id+".fits" + " " + "point-"+id+".fits" + " "+ str(int(numpy.round(nebParam["medFilt"])/pixSize)) + " " + str(int(numpy.round(nebParam["linFilt"] /pixSize))) + " --twod --backmap=back-"+id+".fits"
     os.system(command)
@@ -6812,7 +6812,7 @@ def pointSourceMeasurement(band, fileName, fitsFolder, ext, ATLAS3Dinfo, ATLAS3D
             del(nans)
             
             # run nebuliser
-            if platform.node() == "gandalf":
+            if platform.node() == "glados":
                 os.environ["PATH"] = "/home/cardata/spxmws/hyper-drive/casutools-gandalf/casutools-1.0.30/bin:" + os.environ["PATH"] 
             command = "nebuliser " + outName + " " + "nebMask-"+ATLAS3Did+".fits" + " " + "point-"+ATLAS3Did+".fits" + " "+ str(int(numpy.round(nebParam["medFilt"]/pixSize[0]))) + " " + str(int(numpy.round(nebParam["linFilt"] /pixSize[0]))) + " --twod"
             os.system(command)

@@ -11,7 +11,7 @@ import astropy.io.fits as pyfits
 import sys
 
 # select fits file
-fitsFile = "/home/gandalf/spxmws/Hard-Drive/simstack/Jeni-oldMap/S2COSMOS_21082017_850_fcf_mf_crop.fits"
+fitsFile = "/home/glados/spxmws/Hard-Drive/simstack/Jeni-oldMap/S2COSMOS_21082017_850_fcf_mf_crop.fits"
 
 # overwrite
 overwriteFits = True
